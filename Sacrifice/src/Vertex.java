@@ -16,7 +16,7 @@ public class Vertex {
 		}
 	
 	public double length() {
-		return Math.sqrt(x*x+y*y);
+		return Math.sqrt(x*x+y*y);//Satz des Pythagoras
 	 }
 	
 	public Vertex skalarMult(double s){
