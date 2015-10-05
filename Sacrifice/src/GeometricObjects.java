@@ -45,7 +45,7 @@ public String toString(){
 }
 public double circumference(){
 	return 2*(width+height);
-	}
+	}//Umfang
 public double area(){
 	return height*width;
 }
