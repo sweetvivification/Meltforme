@@ -1,11 +1,11 @@
-public class GeometricObject {
+public class GeometricObjects {
 
 	public Vertex pos;
 	public double height;
 	public double width;
 	
 	
-	public GeometricObject(double width, double height, Vertex pos){
+	public GeometricObjects(double width, double height, Vertex pos){
 		this.pos=pos;
 		this.width=width;
 		this.height=height;
@@ -21,13 +21,13 @@ public class GeometricObject {
 	
 	}
 	
-	public GeometricObject(double width, double height){
+	public GeometricObjects(double width, double height){
 		this(width, height, new Vertex(0,0));
 	}
 	
-	public GeometricObject(double width){this(width,width);}
+	public GeometricObjects(double width){this(width,width);}
 	
-	public GeometricObject(Vertex pos){this(0,0,pos);}
+	public GeometricObjects(Vertex pos){this(0,0,pos);}
 	
     public double getWidth(){return width;}
 	
@@ -47,7 +47,7 @@ public class GeometricObject {
     	&& v.y >=pos.y && v.y <=pos.y+height;  // ist y drin?
     }
     
-    public boolean isLargerThan(GeometricObject that){
+    public boolean isLargerThan(GeometricObjects that){
     	return this.area()>that.area();
     }
     
@@ -59,6 +59,16 @@ public class GeometricObject {
     
     public void move(Vertex v){moveTo(pos.add(v));
 }
+    public boolean equals(Object thatObject){
+		if(thatObject instanceof GeometricObjects){
+			GeometricObjects that = (GeometricObjects)thatObject;
+			
+			return this.width==this.width && this.height == that.height
+					&&this.pos.equals(that.pos);
+		 }
+		return false;
+		}
+
 }
 
 
