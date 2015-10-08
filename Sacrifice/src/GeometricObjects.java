@@ -29,6 +29,8 @@ public class GeometricObjects {
 	
 	public GeometricObjects(Vertex pos){this(0,0,pos);}
 	
+	public GeometricObjects(){this(10);}
+	
     public double getWidth(){return width;}
 	
     public double getHeight(){return height;}
